@@ -12,7 +12,6 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "building states"
-                sh 'node -v' 
                 sh 'npm install' 
                 
             }
