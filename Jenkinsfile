@@ -12,14 +12,14 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "building states"
-                sh 'npm install' 
+                bat 'npm install' 
                 
             }
         }
          stage('Test') { 
             steps {
                 echo "testing stage"
-                sh "npm test"
+                bat "npm test"
             }
         }
          
@@ -36,7 +36,7 @@ pipeline {
           }
           success{
                echo "all stages executed with success."
-               sh 'npm start'
+               bat 'npm start'
           }
      }
 }
