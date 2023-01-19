@@ -29,13 +29,4 @@ pipeline {
             }
         }
     }
-     post{
-          always{
-               echo "pipeline concluded."
-          }
-          success{
-               echo "all stages executed with success."
-               bat 'npm start'
-          }
-     }
 }
